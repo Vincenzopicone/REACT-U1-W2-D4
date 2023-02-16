@@ -5,7 +5,6 @@ import CompanySearchResults from "./components/CompanySearchResults";
 import Favourites from "./components/Favourites";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FavouritesCount from "./components/FavouritesCount";
-import { Container } from "react-bootstrap";
 
 function App() {
   return (
