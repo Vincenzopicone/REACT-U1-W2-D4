@@ -7,9 +7,9 @@ const FavouritesCount = () => {
     const navigate = useNavigate();
     const FavouritesLength = useSelector(state => state.favourites.content.length)
     return(
-        <div className='w-100 d-flex justify-content-evenly'>
+        <div className='w-100 d-flex justify-content-between p-5'>
             
-            <Button className='mx-5' variant='success' onClick={() => navigate("/")}> HOME </Button>            
+            <Button variant='success' onClick={() => navigate("/")}> HOME </Button>            
             <Button variant='dark'  onClick={() => navigate("/favourites")}>FAVOURITES =<span> {FavouritesLength}</span></Button>
         
         </div>
