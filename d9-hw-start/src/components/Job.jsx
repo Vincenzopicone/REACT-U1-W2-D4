@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 const Job = ({ data }) => {
   const dispatch = useDispatch();
 
-
   return (
   <Row
     className="mx-0 mt-3 p-3"

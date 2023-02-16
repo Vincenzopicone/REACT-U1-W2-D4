@@ -1,4 +1,4 @@
-import { Col, Row, Button } from "react-bootstrap";
+import { Col, Row, Button, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 
 const Favourites = () => {
@@ -8,11 +8,14 @@ const Favourites = () => {
   return (
     <Row>
       <Col sm={12}>
-        <ul style={{ listStyle: "none" }}>
+        <ListGroup style={{ listStyle: "none" }}>
           {favouritesContent.map((job, i) => (
-            <li key={i} className="my-4"><Button variant="danger" onClick={() => {dispatch({ type: "REMOVE_TO_FAV", payload: i });}}>DELETE</Button><a href={job.url}>{job.title}</a></li>
+            <ListGroupItem key={i} className="my-4">
+              <Button variant="danger" onClick={() => {dispatch({ type: "REMOVE_TO_FAV", payload: i });}}>DELETE</Button>
+              <a href={job.url}>{job.title}</a>
+            </ListGroupItem>
           ))}
-        </ul>
+        </ListGroup>
       </Col>
     </Row>
   );
